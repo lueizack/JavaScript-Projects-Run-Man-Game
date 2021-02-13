@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: red;
+    overflow: hidden;
+}
+
+.man{
+    background-image: url(man.png);
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 35px;
+}
+
+#scoreCont{
+    color:yellow;
+    font-size: 25px;
+    position: absolute;
+    left: 23px;
+    top: 25px;
+    font-weight: bold;
+    border: 2px dashed white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.gameOver{
+    position: relative;
+    top: 90px;
+    font-size: 75px;
+    color:silver;
+    text-align: center;
+}
+
+.gameContainer{
+    background-image: url(bg.jpg);
+    background-size: 100vh 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.obstacle{
+    background-image: url(tyre.png); 
+    background-size: cover;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    bottom: 0;
+    left: 60vw;
+}
+
+.animateMan{
+    animation: man 0.6s linear ;
+}
+
+.obstacleAnimation{
+    animation: obstacleAnimation 5s linear infinite;
+}
+
+@keyframes man{
+    0%{
+        bottom: 0;
+    }
+
+    50%{
+        bottom: 442px;
+    }
+    
+    100%{
+        bottom: 0;
+        
+    }
+}
+
+@keyframes obstacleAnimation{
+
+    0%{
+        left: 100vw;
+    }
+
+    50%{
+    }
+    
+    100%{
+        
+        left: -10vw;
+    }
+}
